@@ -1,0 +1,64 @@
+import {Link} from 'gatsby'
+import {FiInfo} from 'react-icons/fi'
+import { Counter, LikeButton } from '../components/Complete'
+
+
+<section className="mdx-page">
+
+
+## my first mdx file
+
+**Lorem ipsum dolor sit amet, consectetur adipisicing elit.** Accusamus autem corporis dolor ducimus eum ex fugit id labore, _minima nemo nobis quasi qui quod quos saepe tenetur ullam ut veniam!_
+
+
+[JackSari](https://jacksari.com)
+
+> blockquote
+
+1. First item
+2. Second item
+3. Third item
+
+<div className="code">
+```js
+const firstName = 'jack'
+const lastMame = 'sanchez'
+```
+</div>
+
+  <Link to="/posts" className="btn center-btn">all posts</Link>
+
+<div className="nice-text">
+  <h3>nice text</h3>
+  <FiInfo className="nice-text-icon"/>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad architecto dicta eius fugiat illum incidunt modi pariatur quia recusandae totam. Assumenda doloremque eaque eligendi maxime nesciunt officia quaerat! Accusamus, tenetur.
+</div>
+
+<h2>React component</h2>
+  <Counter/>
+
+```jsx
+  import React from "react"
+  import styled from "styled-components"
+  import { AiOutlineLike } from "react-icons/ai"
+  const LikeButton = () => {
+  const [value, setValue] = React.useState(0)
+  return (
+  <Wrapper>
+    <div>
+      <button onClick={() => setValue(value + 1)}>
+        <AiOutlineLike />
+      </button>
+      <p>Liked the post?
+        <br />
+        Click thumbs up few times
+      </p>
+    </div>
+    <span>+{value}</span>
+  </Wrapper>
+  )
+}
+```
+
+<LikeButton/>
+</section>
